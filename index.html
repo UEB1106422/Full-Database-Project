@@ -1,0 +1,126 @@
+<!-- Login Modal -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwood High School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="projectDatabase.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
+    <div id="navbarContainer"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="section active">
+            <div class="container mx-auto px-4 py-16 md:py-24">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-12 md:mb-0 fade-in">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                            Excellence in <span class="text-green-600 dark:text-green-400">Education</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                            Greenwood High School provides a nurturing environment where students can grow academically, socially, and emotionally.
+                        </p>
+                        <div class="flex space-x-4">
+                            <button class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition" onclick="showModal('loginModal')">
+                                Enroll Now
+                            </button>
+                            <button class="px-6 py-3 border border-green-600 text-green-600 dark:text-green-400 rounded-lg hover:bg-green-50 dark:hover:bg-gray-800 transition" onclick="showSection('about')">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 school-3d fade-in delay-1">
+                        <div class="school-building bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl">
+                            <div class="relative">
+                                <div class="w-full h-64 bg-gradient-to-b from-green-500 to-green-700 rounded-lg flex items-center justify-center">
+                                    <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg">
+                                        <i class="fas fa-graduation-cap text-2xl text-gray-800"></i>
+                                    </div>
+                                    <div class="text-white text-center">
+                                        <h3 class="text-2xl font-bold">GHS</h3>
+                                        <p class="text-sm">Since 1995</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-6 grid grid-cols-3 gap-2">
+                                <div class="h-4 bg-green-400 rounded"></div>
+                                <div class="h-4 bg-green-500 rounded"></div>
+                                <div class="h-4 bg-green-600 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section hidden">
+            <div class="container mx-auto px-4 py-16">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">About Our School</h2>
+                    <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12"></div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="section hidden">
+            <div class="container mx-auto px-4 py-16">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Academic Programs</h2>
+                    <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footerContainer"></footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content" id="loginModalContent"></div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content" id="registerModalContent"></div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content" id="contactModalContent"></div>
+    </div>
+
+    <!-- Application Modal -->
+    <div id="applyModal" class="modal">
+        <div class="modal-content">
+            <div id="applyModalHeader"></div>
+            <div id="applyNotLoggedInContainer"></div>
+            
+            <form id="applicationForm" class="hidden">
+            <div id="applicationFormContainer" class="hidden"></div>
+        </div>
+    </div>
+
+    <!-- Account Modal -->
+<div id="accountModal" class="modal">
+    <div class="modal-content" id="accountModalContent"></div>
+</div>
+
+    <script src="projectDatabase.js"></script>
+    <script src="application.js"></script>
+    <script src="applicationUI.js"></script>
+</body>
+</html>
